@@ -15,7 +15,7 @@ class TestBooksCollector:
         collector.add_new_book('Горе от ума')
         assert len(collector.get_books_genre()) == 1
 
-    # проверка добавления книги с длинной имени больше 40 символов
+    # проверка добавления книги с длинной имени больше 40 символов  ===================
     def test_add_new_book_add_book_with_name_50_symbol(self):
         collector = BooksCollector()
         collector.add_new_book('Long_Name_Long_Name_Long_Name_Long_Name_Long_Name_')
@@ -53,13 +53,13 @@ class TestBooksCollector:
         collector.add_book_in_favorites('Книга_7')
         assert len(collector.get_list_of_favorites_books()) == 2
 
-    # проверяем добавление книги в избранное, которой нет в словаре
+    # проверяем добавление книги в избранное, которой нет в словаре ================
     def test_add_book_in_favorites_not_in_list(self):
         collector = BooksCollector()
         collector.add_book_in_favorites('Книга_8')
         assert len(collector.get_list_of_favorites_books()) == 0
 
-    # проверка удаления книги из избранного, если она там есть
+    # проверка удаления книги из избранного, если она там есть ====================
     def test_delete_book_from_favorites_if_book_in_list(self):
         collector = BooksCollector()
         collector.add_new_book('Книга_9')
